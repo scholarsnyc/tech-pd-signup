@@ -31,7 +31,6 @@ get '/signups' do
   @sessions = Session.all
   erb :signups
 end
-'
 
 get '/rebuild' do
   Signup.all.destroy!
