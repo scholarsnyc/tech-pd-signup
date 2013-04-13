@@ -1,0 +1,10 @@
+<h1>Signup Registration</h1>
+<h2><%= @session.title %></h2>
+<form id="create_signup" name="create_signup" method="post" action="/signup" accept-charset="UTF-8">
+  <input value="<%= @session.id %>" id="signup_session_id" name="signup[session_id]" type="hidden" />
+  <p>
+    <label for="sign_up_name">Your Name</label>
+    <input placeholder="Your Name" id="sign_up_name" name="signup[name]" type="text" />
+  </p>
+  <input type="Submit" value="Rock and Roll" class="btn btn-primary">
+</form>

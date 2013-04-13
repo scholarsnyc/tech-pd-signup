@@ -1,0 +1,22 @@
+<h1>Available Sessions</h1>
+
+<table class='tablesorter table' id='signup-list'>
+  <thead>
+    <tr>
+      <th>Professional Development Title</th>
+      <th>Signups Remaining</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr<%= 'class="error"' unless session.remaining > 0 %>>
+        <% if session.remaining > 0 %>
+          <td><a href="/signup/<%= session.id %>"><%= session.title %></a></td>
+        <% else %>
+          <td><%= session.title %> (Full)</td>
+        <% end %>
+        <td><%= session.remaining %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
