@@ -14,7 +14,6 @@ end
 
 get '/:id' do
   @signup = Signup.get(params[:id])
-  @signup.to_json
 end
 
 delete '/:id' do

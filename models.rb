@@ -34,6 +34,8 @@ class Session
     ].each do |session|
       Session.create({title: session})
     end
+    
+    "Recreated!"
   end
   
 end
