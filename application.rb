@@ -11,6 +11,16 @@ get '/signup/:id' do
   @session = Session.get(params[:id])
   erb :signup
 end
+
+get '/:id' do
+  @signup = Signup.get(params[:id])
+  @signup.to_json
+end
+
+delete '/:id' do
+  Signup.get(params[:id]).destroy!
+  redirect '/'
+end
   
 post '/signup' do
   @signup = Signup.create(params[:signup])
@@ -21,6 +31,7 @@ get '/signups' do
   @sessions = Session.all
   erb :signups
 end
+'
 
 get '/rebuild' do
   Signup.all.destroy!
