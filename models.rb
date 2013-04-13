@@ -29,8 +29,8 @@ class Session
       "How to Screencasts for Portions of Your Lessons",
       "Developing iLearn Coursework/Blended Learning",
       "iPads in the Classroom ",
-      "SMART Boards and the Common Core"
-      "Technology Grab Bag: Be More Effecient and Effective with Technology"
+      "SMART Boards and the Common Core",
+      "Be More Effecient and Effective"
     ].each do |session|
       Session.create({title: session})
     end

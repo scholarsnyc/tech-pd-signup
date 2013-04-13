@@ -3,7 +3,7 @@
   <h3><%= session.title %></h3>
   <ul>
     <% session.signups.each do |signup| %>
-    <li><%= signup.name %></li>
+    <li><%= signup.name %> <span class="badge badge-info"><%= signup.id %></span></li>
     <% end %>
   </ul>
 <% end %>
