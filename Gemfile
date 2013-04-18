@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'data_mapper'
+gem 'pry'
 
 group :production do
  gem 'pg'

@@ -6,6 +6,11 @@ get '/' do
   @sessions = Session.all
   erb :list
 end
+
+get '/signups' do
+  @sessions = Session.all
+  erb :signups
+end
   
 get '/signup/:id' do
   @session = Session.get(params[:id])
@@ -24,9 +29,4 @@ end
 post '/signup' do
   @signup = Signup.create(params[:signup])
   erb :confirmation
-end
-
-get '/signups' do
-  @sessions = Session.all
-  erb :signups
 end
